@@ -8,6 +8,11 @@ function App() {
           <File name = "Shine.mp3"/>
           <File name = "Don't Stop Believing.mp4"/>
         </Folder>
+          <Folder name = "Coding">
+            <File name = "functions.js"/>
+            <File name = "retail_methods.rb"/>
+            <File name = "calculations.py"/>
+          </Folder>
         <File name = "dogs.jpeg" />
         <File name = "cats.png" />
 
@@ -45,6 +50,10 @@ const File = (props) => {
     'png' : 'file image',
     'jpeg' : 'file image outline',
     'txt' : 'pencil alternate',
+    'js' : 'node js',
+    'rb' : 'gem',
+    'py' : 'python',
+    'git' : 'github',
   };
   const fileIcon = fileIconsList[fileExtension]
     return <div>
