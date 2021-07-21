@@ -3,17 +3,25 @@ import React from 'react';
 function App() {
   return <div>
       
-    <Folder name = "Desktop" />
+    <Folder name = "Desktop" >
+        <File name = "dogs.jpeg" />
+        <File name = "cats.png" />
+
+    </ Folder>
     <Folder name = "Applications" />
-    <File name = "dogs.jpeg" />
-    <File name = "cats.png" />
 
     </div>
 }
 
 
 const Folder = (props) => {
-  return <h4>{props.name}</h4>
+
+  return <div>
+    {props.name}
+    <div style={{marginLeft: '17px'}}>
+      {props.children}
+    </div>
+    </div>
 }
 
 const File = (props) => {
