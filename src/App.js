@@ -12,12 +12,22 @@ function App() {
             <File name = "functions.js"/>
             <File name = "retail_methods.rb"/>
             <File name = "calculations.py"/>
+            <File name = "modules.git"/>
+          </Folder>
+          <Folder name = "Notes">
+            <File name = "to_do_list.txt"/>
+            <File name = "best_practices.txt"/>
+            <File name = "invention_ideas.txt"/>
           </Folder>
         <File name = "dogs.jpeg" />
         <File name = "cats.png" />
 
     </ Folder>
-    <Folder name = "Applications" />
+    <Folder name = "Applications" >
+      <Folder name = "Paint"/>
+      <Folder name = "Asteroids"/>
+      <Folder name = "Calculator" />
+    </Folder>
 
     </div>
 }
