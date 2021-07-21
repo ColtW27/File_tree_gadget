@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+
+import Folder from './Folder';
+import File from './File';
 
 function App() {
   return <div>
@@ -21,8 +23,7 @@ function App() {
           </Folder>
         <File name = "dogs.jpeg" />
         <File name = "cats.png" />
-
-    </ Folder>
+    </Folder>
     <Folder name = "Applications" >
       <Folder name = "Paint"/>
       <Folder name = "Asteroids"/>
@@ -30,47 +31,7 @@ function App() {
     </Folder>
 
     </div>
-}
-
-
-const Folder = (props) => {
-  const [ isOpen, setIsOpen] = useState(false);
-  const {name, children} = props;
-  const direction = isOpen ? 'down' : 'right';
-  const folderOpen = isOpen ? 'open' : '';
-  const handleClick = () => { setIsOpen(!isOpen); }
-  return <div>
-    <span onClick={handleClick}>
-      <i className={`blue folder ${folderOpen} icon`}></i>
-      <i className={`caret ${direction} icon`}></i>
-    </span>
-    {name}
-    <div style={{marginLeft: '17px'}}>
-      {isOpen ? children : null}
-    </div>
-    </div>
-}
-
-const File = (props) => {
-  const {name} = props;
-  const fileExtension = name.split('.')[1];
-  const fileIconsList = {
-    'mp3' : 'file audio outline',
-    'mp4' : 'file video outline',
-    'png' : 'file image',
-    'jpeg' : 'file image outline',
-    'txt' : 'pencil alternate',
-    'js' : 'node js',
-    'rb' : 'gem',
-    'py' : 'python',
-    'git' : 'github',
-  };
-  const fileIcon = fileIconsList[fileExtension]
-    return <div>
-      <i className={`${fileIcon} icon`}></i>
-      {name}
-    </div>
-}
+};
 
 
 export default App;
